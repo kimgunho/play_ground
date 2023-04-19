@@ -1,0 +1,10 @@
+{
+  "name": "play_ground",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "packageManager": "yarn@3.5.0"
+}

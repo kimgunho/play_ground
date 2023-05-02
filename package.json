@@ -7,7 +7,8 @@
     ]
   },
   "scripts": {
-    "lint": "eslint ./packages --ext .ts,.tsx,.js,.jsx --cache"
+    "lint": "eslint ./packages --ext .ts,.tsx,.js,.jsx --cache",
+    "lint:fix": "eslint ./packages --ext .ts,.tsx,.js,.jsx --cache --fix"
   },
   "packageManager": "yarn@3.5.0",
   "devDependencies": {
@@ -20,6 +21,8 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-import-resolver-typescript": "^3.5.5",
     "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^27.2.1",
+    "eslint-plugin-jest-dom": "^4.0.3",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",

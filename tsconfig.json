@@ -25,7 +25,7 @@
       "path": "packages/shared-components"
     },
     {
-      "path": "packages/first"
+      "path": "packages/shared-utils"
     }
   ]
 }

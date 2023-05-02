@@ -2,16 +2,27 @@ const path = require('path');
 
 module.exports = {
   extends: ['airbnb', 'prettier'],
-  plugins: ['prettier', 'react-hooks'],
+  plugins: ['prettier', 'react-hooks', 'jest', 'jest-dom'],
   rules: {
     'prettier/prettier': 'error',
-    'import/no-extraneous-dependencies': ['off'],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          '**/*.@(spec|test).@(js|ts)?(x)',
+          '**/jest.setup.ts',
+          '**/vite.*.ts',
+          '**/webpack.*.js',
+          '**/script/*.js',
+          '**/mocks/**/*.@(js|ts)?(x)',
+        ],
+      },
+    ],
+    '@typescript-eslint/no-unsafe-call': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
-    'import/no-absolute-path': 'off',
-    'import/no-unresolved': 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx', '.jsx', 'spec.js'] }],
     'react/function-component-definition': 'off',
     'import/no-duplicates': 'off',
@@ -37,7 +48,7 @@ module.exports = {
             position: 'before',
           },
           {
-            pattern: '[@]shared/**',
+            pattern: 'shared/**',
             group: 'external',
             position: 'after',
           },
@@ -56,10 +67,7 @@ module.exports = {
     {
       files: ['**/*.ts?(x)'],
       parser: '@typescript-eslint/parser',
-      extends: [
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking',
-      ],
+      extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
         'react/prop-types': 'off',
         'react/require-default-props': 'off',
@@ -69,9 +77,11 @@ module.exports = {
         'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'error',
         '@typescript-eslint/no-floating-promises': 'off',
+        'no-console': 'error',
+        '@typescript-eslint/no-unused-vars': 'error',
       },
       parserOptions: {
-        project: ['./tsconfig.base.json', './packages/**/tsconfig.json'],
+        project: ['./tsconfig.json', './packages/**/tsconfig.json'],
       },
     },
     {
@@ -80,6 +90,16 @@ module.exports = {
         'import/resolver': {
           typescript: {
             project: path.resolve(`${__dirname}/packages/shared-components/tsconfig.json`),
+          },
+        },
+      },
+    },
+    {
+      files: ['packages/shared-utils/**/*.ts?(x)', 'packages/shared-utils/**/*.js?(x)'],
+      settings: {
+        'import/resolver': {
+          typescript: {
+            project: path.resolve(`${__dirname}/packages/shared-utils/tsconfig.json`),
           },
         },
       },
@@ -101,6 +121,7 @@ module.exports = {
   },
   env: {
     browser: true,
-    es2021: true,
+    node: true,
+    'jest/globals': true,
   },
 };

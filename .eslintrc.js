@@ -18,6 +18,7 @@ module.exports = {
         ],
       },
     ],
+    'import/no-unresolved': 'error',
     '@typescript-eslint/no-unsafe-call': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',

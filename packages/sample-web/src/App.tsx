@@ -4,8 +4,10 @@ import viteLogo from 'public/vite.svg';
 
 import reactLogo from './assets/react.svg';
 
+import './App.css';
+
 function App() {
-  const [count, setCount] = useState<number>(0);
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -17,7 +19,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>hello world</h1>
+      <h1>Vite + React</h1>
       <div className="card">
         <button type="button" onClick={() => setCount((x) => x + 1)}>
           count is {count}

@@ -105,6 +105,16 @@ module.exports = {
         },
       },
     },
+    {
+      files: ['packages/sample-web/**/*.ts?(x)', 'packages/sample-web/**/*.js?(x)'],
+      settings: {
+        'import/resolver': {
+          typescript: {
+            project: path.resolve(`${__dirname}/packages/sample-web/tsconfig.json`),
+          },
+        },
+      },
+    },
   ],
   settings: {
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx', 'spec.js'],

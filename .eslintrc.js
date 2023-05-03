@@ -70,7 +70,7 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': 'error',
       },
       parserOptions: {
-        // project: ['./tsconfig.json', './packages/**/tsconfig.json'],
+        project: ['./tsconfig.json', './packages/**/tsconfig.json'],
       },
     },
     {

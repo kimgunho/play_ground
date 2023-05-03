@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { a } from 'shared-components';
+import { a } from 'shared-components/src';
 
 import viteLogo from 'public/vite.svg';
 
@@ -11,7 +11,6 @@ import './App.css';
 function App() {
   const [count, setCount] = useState(0);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const objArr = [
     {
       title: 'ko',

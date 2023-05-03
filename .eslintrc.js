@@ -9,12 +9,7 @@ module.exports = {
       'error',
       {
         devDependencies: [
-          '**/*.@(spec|test).@(js|ts)?(x)',
-          '**/jest.setup.ts',
-          '**/vite.*.ts',
-          '**/webpack.*.js',
-          '**/script/*.js',
-          '**/mocks/**/*.@(js|ts)?(x)',
+          { devDependencies: false, optionalDependencies: false, peerDependencies: false },
         ],
       },
     ],

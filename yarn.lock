@@ -7128,6 +7128,8 @@ __metadata:
     "@vitejs/plugin-react": ^4.0.0
     react: ^18.2.0
     react-dom: ^18.2.0
+    shared-components: "workspace:^"
+    shared-utils: "workspace:^"
     typescript: ^5.0.2
     vite: ^4.3.2
   languageName: unknown
@@ -7190,7 +7192,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shared-components@workspace:packages/shared-components":
+"shared-components@workspace:^, shared-components@workspace:packages/shared-components":
   version: 0.0.0-use.local
   resolution: "shared-components@workspace:packages/shared-components"
   dependencies:
@@ -7204,7 +7206,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"shared-utils@workspace:packages/shared-utils":
+"shared-utils@workspace:^, shared-utils@workspace:packages/shared-utils":
   version: 0.0.0-use.local
   resolution: "shared-utils@workspace:packages/shared-utils"
   dependencies:

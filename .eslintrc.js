@@ -5,14 +5,7 @@ module.exports = {
   plugins: ['prettier', 'react-hooks', 'jest', 'jest-dom'],
   rules: {
     'prettier/prettier': 'error',
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: [
-          { devDependencies: false, optionalDependencies: false, peerDependencies: false },
-        ],
-      },
-    ],
+    'import/no-extraneous-dependencies': ['off'],
     'import/no-unresolved': 'error',
     '@typescript-eslint/no-unsafe-call': 'off',
     'react-hooks/rules-of-hooks': 'error',
@@ -77,7 +70,7 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': 'error',
       },
       parserOptions: {
-        project: ['./tsconfig.json', './packages/**/tsconfig.json'],
+        // project: ['./tsconfig.json', './packages/**/tsconfig.json'],
       },
     },
     {

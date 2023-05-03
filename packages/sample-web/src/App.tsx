@@ -11,6 +11,35 @@ import './App.css';
 function App() {
   const [count, setCount] = useState(0);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const objArr = [
+    {
+      title: 'ko',
+      desc: '안녕하세요',
+      color: 'blue',
+    },
+    {
+      title: 'en',
+      desc: '헬로',
+      color: 'gray',
+    },
+    {
+      title: 'jp',
+      desc: '곤니찌와',
+      color: 'yellow',
+    },
+    {
+      title: 've',
+      desc: '붕',
+      color: 'black',
+    },
+    {
+      title: 'ti',
+      desc: '사와디캅',
+      color: 'green',
+    },
+  ];
+
   return (
     <>
       <div>

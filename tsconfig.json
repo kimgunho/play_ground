@@ -3,22 +3,15 @@
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "Node",
     "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "strict": true,
     "target": "es6",
     "lib": ["ES5", "ES6", "ESNext", "DOM"],
-    "baseUrl": ".",
-    "module": "esnext",
-    "composite": false,
-    "declaration": true,
-    "declarationMap": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "inlineSources": false,
-    "isolatedModules": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "preserveWatchOutput": true,
     "skipLibCheck": true,
-    "strict": true
+    "baseUrl": ".",
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "isolatedModules": true
   },
   "references": [
     {
@@ -30,5 +23,6 @@
     {
       "path": "packages/sample-web"
     }
-  ]
+  ],
+  "exclude": ["packages/**/dist/**"]
 }

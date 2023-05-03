@@ -11,4 +11,5 @@ export default defineConfig({
       public: path.resolve(__dirname, './public'),
     },
   },
+  cacheDir: '.yarn/cache',
 });
